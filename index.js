@@ -3,10 +3,6 @@ const fs = require('fs')
 const file = '/tmp/nttv-m3u8/nttv.m3u8'
 
 function addLineToFile(content) {
-  const dir = '/tmp/nttv-m3u8'
-  if (!fs.existsSync(dir)){
-    fs.mkdirSync(dir);
-  }
   fs.appendFileSync(file, content + '\n');
 }
 
@@ -15,6 +11,11 @@ function insertChannel(channelId, tvgId, tvgName) {
     addLineToFile("#EXTINF:-1 tvg-id=\"" + tvgId + "\" tvg-name=\"" + tvgName + "\" tvg-logo=\"\" group-title=\"南通电视台\"")
     addLineToFile(url)
   })
+}
+
+const dir = '/tmp/nttv-m3u8'
+if (!fs.existsSync(dir)){
+  fs.mkdirSync(dir);
 }
 
 fs.writeFileSync(file, '#EXTM3U\n')

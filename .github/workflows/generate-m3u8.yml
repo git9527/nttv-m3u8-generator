@@ -1,4 +1,4 @@
-name: Geneate epg.xml
+name: Geneate m3u8.xml
 
 on:
   push:
