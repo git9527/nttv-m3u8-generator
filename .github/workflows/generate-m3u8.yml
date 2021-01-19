@@ -2,6 +2,7 @@ name: Geneate m3u8.xml
 
 on:
   push:
+
   schedule:
   - cron: '20 21 * * *'
 
