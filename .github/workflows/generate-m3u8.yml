@@ -1,0 +1,31 @@
+name: Geneate epg.xml
+
+on:
+  push:
+  schedule:
+  - cron: '20 21 * * *'
+
+jobs:
+
+  generate:
+    if: github.repository == 'git9527/nttv-m3u8-generator'
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up NodeJs
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+    - name: Install dependencies
+      run: npm install
+    - name: Generate m3u8
+      run: node index.js
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@3.7.1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: assets
+        FOLDER: /tmp/nttv-m3u8
+        CLEAN: true
