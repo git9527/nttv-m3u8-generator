@@ -1,8 +1,8 @@
-#生成南通电视台直播列表
+# 生成南通电视台直播列表
 
 基于https://img.ntjoy.com//templates/ntjoy/Public/new/httpInterfaceSign-min.js
 
-##示例文件如下
+## 示例文件如下
 
 ```
 #EXTM3U
