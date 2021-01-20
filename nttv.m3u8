@@ -1,7 +1,7 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="" tvg-name="公共频道" tvg-logo="" group-title="南通电视台"
-http://nttv.wshls.homecdn.com/live/7cc5.m3u8?t=1611093245&k=a7645ae92efe1d43bcd7b5cf9bab362f
 #EXTINF:-1 tvg-id="120d425d" tvg-name="社教频道" tvg-logo="" group-title="南通电视台"
-http://nttv.wshls.homecdn.com/live/7cc7.m3u8?t=1611093245&k=b5a45c078bc218381f160cabae96a1e8
+http://nttv.wshls.homecdn.com/live/7cc7.m3u8?t=1611112476&k=b6515f2da4ffbb19087f60f00c93c0c7
 #EXTINF:-1 tvg-id="061f902e" tvg-name="新闻综合" tvg-logo="" group-title="南通电视台"
-http://nttv.wshls.homecdn.com/live/7cc9.m3u8?t=1611093245&k=742d23659b908640b212d2752201d492
+http://nttv.wshls.homecdn.com/live/7cc9.m3u8?t=1611112476&k=0d9d743c0fd0bdf08049770d00ee3147
+#EXTINF:-1 tvg-id="" tvg-name="公共频道" tvg-logo="" group-title="南通电视台"
+http://nttv.wshls.homecdn.com/live/7cc5.m3u8?t=1611112477&k=a13f01eae182b29ee62de839fcda5301
