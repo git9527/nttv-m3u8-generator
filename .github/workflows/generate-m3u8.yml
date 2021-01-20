@@ -9,7 +9,7 @@ on:
 
 jobs:
 
-  generate:
+  run:
     if: github.repository == 'git9527/nttv-m3u8-generator'
     runs-on: ubuntu-latest
 
@@ -24,10 +24,18 @@ jobs:
     - name: Generate m3u8
       run: node index.js
 
-    - name: Deploy 🚀
+    - name: Upload to assets branch 🚀
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: assets
         FOLDER: /tmp/nttv-m3u8
         CLEAN: true
+
+    - name: Sync to Gitee
+      uses: wearerequired/git-mirror-action@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
+        with:
+          source-repo: "git@github.com:git9527/nttv-m3u8-generator.git"
+          destination-repo: "git@gitee.com:git9527/nttv-m3u8-generator.git"
