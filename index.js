@@ -8,7 +8,7 @@ function addLineToFile(content) {
 
 function insertChannel(channelId, tvgId, tvgName) {
   nttv.getSignUrl(channelId, url => {
-    addLineToFile("#EXTINF:-1 tvg-id=\"" + tvgId + "\" tvg-name=\"" + tvgName + "\" tvg-logo=\"\" group-title=\"南通电视台\"")
+    addLineToFile("#EXTINF:-1 tvg-id=\"" + tvgId + "\" tvg-name=\"" + tvgName + "\" tvg-logo=\"\" group-title=\"南通电视台\"," + tvgName)
     addLineToFile(url)
   })
 }
