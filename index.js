@@ -19,11 +19,17 @@ if (!fs.existsSync(dir)){
 }
 
 fs.writeFileSync(file, '#EXTM3U\n')
-console.log('1')
 
-insertChannel("5e5d857d607dcc56016087facd760098", "061f902e", "新闻综合")
-insertChannel("5e5d857d607dcc56016087fa8f3e0095", "120d425d", "社教频道")
-insertChannel("5e5d857d607dcc56016087fa535a0092", "", "公共频道")
+async function start() {
+  console.log('1')
+  await insertChannel("5e5d857d607dcc56016087facd760098", "061f902e", "新闻综合")
+  console.log('2')
+  await insertChannel("5e5d857d607dcc56016087fa8f3e0095", "120d425d", "社教频道")
+  console.log('3')
+  await insertChannel("5e5d857d607dcc56016087fa535a0092", "", "公共频道")
+}
+
+start()
 
 
 
