@@ -27,6 +27,8 @@ async function start() {
   await insertChannel("5e5d857d607dcc56016087fa8f3e0095", "120d425d", "社教频道")
   console.log('3')
   await insertChannel("5e5d857d607dcc56016087fa535a0092", "", "公共频道")
+  console.log('---final file content---')
+  console.log(fs.readFileSync(file, 'utf8'))
 }
 
 start()
