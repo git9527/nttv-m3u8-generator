@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - timeout-minutes: 2
     - uses: actions/checkout@v2
     - name: Set up NodeJs
       uses: actions/setup-node@v1
